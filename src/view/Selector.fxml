@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="SelectorPage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectorController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.79" pickOnBounds="true">
+         <image>
+            <Image url="@../image/clothsshop.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="341.0" layoutX="96.0" layoutY="36.0" opacity="0.62" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="408.0" />
+      <JFXButton fx:id="btnOrder" layoutX="130.0" layoutY="72.0" onAction="#btnOrderOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Orders" textFill="#214a2f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnItems" layoutX="130.0" layoutY="119.0" onAction="#btnItemsOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Items">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnEmployees" layoutX="130.0" layoutY="166.0" onAction="#btnEmployeesOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Employees">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSupllliers" layoutX="130.0" layoutY="217.0" onAction="#btnSuplliersOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Suppliers">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnOrderDetails" layoutX="130.0" layoutY="265.0" onAction="#btnOrderDetailsOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Order Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSalesReprt" layoutX="130.0" layoutY="316.0" onAction="#btnSalesReportOnClickAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #26a853; -fx-background-radius: 10px;" text="Sales Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <PieChart fx:id="pie_chart" layoutX="261.0" layoutY="107.0" prefHeight="177.0" prefWidth="232.0" />
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="337.0" layoutY="80.0" prefHeight="20.0" prefWidth="87.0" text="2023-10-13">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="329.0" layoutY="54.0" prefHeight="46.0" prefWidth="105.0" style="-fx-border-radius: 20px; -fx-border-color: black;" />
+      <JFXButton fx:id="btnLogOut" layoutX="410.0" layoutY="321.0" onAction="#btnLogOutOnClickAction" prefHeight="34.0" prefWidth="60.0" style="-fx-background-color: #f86a6a; -fx-background-radius: 10px;" text="LogOut" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="344.0" layoutY="59.0" prefHeight="20.0" prefWidth="76.0" text="19:21:24">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Circle fill="#eb8911" layoutX="279.0" layoutY="297.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f2ee24" layoutX="338.0" layoutY="297.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#0bbc26" layoutX="394.0" layoutY="297.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="444.0" layoutY="298.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="289.0" layoutY="289.0" prefHeight="17.0" prefWidth="37.0" text="Gents" />
+      <Label layoutX="454.0" layoutY="289.0" prefHeight="17.0" prefWidth="37.0" text="Other" />
+      <Label layoutX="403.0" layoutY="289.0" prefHeight="17.0" prefWidth="37.0" text="Kids" />
+      <Label layoutX="346.0" layoutY="289.0" prefHeight="17.0" prefWidth="37.0" text="Ladies" />
+   </children>
+</AnchorPane>

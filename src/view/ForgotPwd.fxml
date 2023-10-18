@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="ForgotPwd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ForgotPwdController">
+   <children>
+      <JFXButton fx:id="btnSendOPT" layoutX="44.0" layoutY="77.0" onAction="#btnSendOPTOOnClickAction" style="-fx-background-color: #2535e4;" text="send OTP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="341.0" layoutY="308.0" onAction="#btnSaveOnClickAction" style="-fx-background-color: #2535e4;" text="Save" textFill="WHITE" />
+      <JFXButton fx:id="btnOK" layoutX="147.0" layoutY="119.0" onAction="#btnOKOnClickAction" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: #2535e4;" text="Ok" textFill="WHITE" />
+      <Label alignment="TOP_LEFT" layoutX="44.0" layoutY="14.0" prefHeight="65.0" prefWidth="371.0" text="If you forgot your password, Then click the button send OTP and enter the recieved pin on your email, in the below text field. Then you can change your password. " textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOPT" layoutX="45.0" layoutY="114.0" prefHeight="25.0" prefWidth="77.0" promptText="  *   *   *    *">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPassword" layoutX="159.0" layoutY="184.0" prefHeight="25.0" prefWidth="170.0" promptText="password">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtConfirmPassword" layoutX="159.0" layoutY="236.0" prefHeight="25.0" prefWidth="170.0" promptText="password">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="43.0" layoutY="183.0" prefHeight="27.0" prefWidth="113.0" text="New Password*        :">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="240.0" prefHeight="27.0" prefWidth="113.0" text="Confirm Password*   :">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

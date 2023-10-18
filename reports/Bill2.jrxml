@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bill2" pageWidth="290" pageHeight="500" columnWidth="250" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e9fdee7-d6e4-4041-8b9e-9413af5377d1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT*FROM orderdetails ORDER BY order_id DESC LIMIT 1]]>
+	</queryString>
+	<field name="order_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="order_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orderdetails"/>
+	</field>
+	<field name="item_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="item_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orderdetails"/>
+	</field>
+	<field name="qty" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orderdetails"/>
+	</field>
+	<field name="price" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orderdetails"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="-8" y="-11" width="79" height="77" uuid="95b0dc26-73fd-4123-af13-e78812249ade"/>
+				<imageExpression><![CDATA["C:/Users/suran/Downloads/Capture.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="50" y="0" width="212" height="30" uuid="0bfc75fb-b108-4f4e-bc8b-ee5fc0ae4189"/>
+				<textElement textAlignment="Center">
+					<font fontName="Berlin Sans FB Demi" size="22"/>
+				</textElement>
+				<text><![CDATA[RV Fashion Centre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="30" width="158" height="13" uuid="47799a3c-aa54-4e97-b839-3686b3efc27e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bodoni MT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. 42, Main Street, Ambalangoda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="43" width="158" height="23" uuid="bc9ff713-d161-431c-8dca-65f0de541fbd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bodoni MT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[091-2524524 / 077-9712044]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="71" width="249" height="1" uuid="c32750c5-1f1f-42a4-a121-2ccd2aacd9a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="149" y="0" width="100" height="20" uuid="95e507e0-824c-48f9-b9f5-017ff432f11e"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="149" y="14" width="100" height="16" uuid="a868b85a-df1c-4a49-8bfb-fa4c7e94807e"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="0" width="100" height="30" uuid="2e52317a-ecfb-4202-88d0-2219ce7ad557"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{order_id}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="30" width="249" height="1" uuid="4d0fee9e-5235-4970-986d-517d9f249792">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="15de85a1-1f36-4466-a8e8-95cf28e09d51"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black"/>
+				</textElement>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="76" y="0" width="100" height="20" uuid="645058fc-3a98-4062-894f-f172697b53c3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="0" width="100" height="20" uuid="c55e43db-b41e-4c08-bcaa-2c9a13180480"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="20" width="100" height="30" uuid="088910c7-204f-4918-b7ad-2825b9ef6978"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{item_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="20" width="100" height="30" uuid="ae53ccdf-edfa-4359-bc4e-7d7baffb1f57"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="20" width="70" height="30" uuid="abdcdb3e-2575-4587-b6e4-a718233ce839"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="250" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="67" width="248" height="1" uuid="0a82fd6a-d0d8-409d-bc25-60deb878d2e7"/>
+			</line>
+			<staticText>
+				<reportElement x="104" y="36" width="67" height="15" uuid="72bd986d-0ca5-4718-9bd5-f4f5546901c2"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total   :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="153" y="30" width="88" height="1" uuid="b482eefe-c57c-4af1-a50a-f6197ee3480f"/>
+			</line>
+			<line>
+				<reportElement x="153" y="54" width="88" height="1" uuid="e0a21c43-a856-4068-97dc-8af1e396bb3e"/>
+			</line>
+			<line>
+				<reportElement x="153" y="57" width="88" height="1" uuid="8c04f33e-d1d7-4e35-9b96-d5381471403e"/>
+			</line>
+			<textField>
+				<reportElement x="153" y="34" width="96" height="23" uuid="2f6c5222-f4ca-481b-8bef-99eba26e1f16"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="94" width="248" height="30" uuid="5ba89843-f9a2-495d-bc63-ad22f9a3f000"/>
+				<text><![CDATA[Items with proof of purchase will be exchanged within seven days.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="124" width="250" height="30" uuid="9beaacf4-9ec8-4b2a-ba73-731edd07993d"/>
+				<text><![CDATA[Underwears , gift vouchers  and damaged items are non exchangeable.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="154" width="249" height="30" uuid="72037edf-9d2c-43bb-8b5a-0ecbb28bc4ac"/>
+				<text><![CDATA[In case of price discrepancy, return the item & bill within 7 days for refund of difference.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="220" width="210" height="30" uuid="69b02412-10a6-40a5-82d5-1d1200574a99"/>
+				<textElement textAlignment="Center" markup="html">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* * * * Thank You Come Again * * * *]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

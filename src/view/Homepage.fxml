@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homePage" prefHeight="375.0" prefWidth="559.0" style="-fx-background-image: C:\Users\suran\ICM102\javaFX finala coursework\cloths shop.jpg;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
+   <children>
+      <ImageView fitHeight="375.0" fitWidth="560.0" layoutY="-1.0" opacity="0.68" pickOnBounds="true">
+         <image>
+            <Image url="@../image/clothsshop.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="349.0" layoutX="125.0" layoutY="14.0" opacity="0.86" stroke="BLACK" strokeType="INSIDE" width="302.0" />
+      <Label id="lblUserName" layoutX="155.0" layoutY="99.0" prefHeight="30.0" prefWidth="105.0" text="User Name :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label id="lblPassword" layoutX="155.0" layoutY="192.0" prefHeight="30.0" prefWidth="93.0" text="Password :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXPasswordField id="txtPassword" fx:id="txtPassword" layoutX="159.0" layoutY="222.0" prefHeight="25.0" prefWidth="242.0" promptText="password" />
+      <JFXTextField id="txtUserName" fx:id="txtUserName" layoutX="159.0" layoutY="129.0" prefHeight="25.0" prefWidth="242.0" promptText="username" />
+      <CheckBox fx:id="btnShowPwd" layoutX="298.0" layoutY="266.0" mnemonicParsing="false" onAction="#btnShowPwdOnClickAction" prefHeight="36.0" prefWidth="105.0" text="show password" />
+      <JFXButton id=" " fx:id="btnSignIn" layoutX="152.0" layoutY="315.0" onAction="#btnSignInClickOnAction" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: red;" text="SignIn" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnLogIn" layoutX="334.0" layoutY="312.0" onAction="#btnLogInOnClickAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #14ee55;" text="LogIn" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="246.0" layoutY="68.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #000000; -fx-background-radius: 10px;" />
+      <Label layoutX="266.0" layoutY="28.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #5e5c5c; -fx-background-radius: 15px;" />
+      <JFXButton fx:id="btnForgotPwd" layoutX="152.0" layoutY="272.0" onAction="#btnForgotPwdOnClickAction" prefHeight="25.0" prefWidth="128.0" text="Forgotten Password?" textFill="#270bb5" />
+      <JFXTextField id="txtUserName" fx:id="txtPassword2" layoutX="159.0" layoutY="222.0" prefHeight="25.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="420.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierController">
+   <children>
+      <AnchorPane fx:id="EmployeePage" prefHeight="494.0" prefWidth="795.0">
+         <children>
+            <ImageView fitHeight="494.0" fitWidth="802.0" layoutX="-4.0" opacity="0.79" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/clothsshop.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="407.0" layoutX="52.0" layoutY="46.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" width="686.0" />
+            <JFXButton fx:id="btnBack" layoutX="661.0" layoutY="413.0" onAction="#btnBackOnClickAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #7c207c; -fx-background-radius: 5px;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <TextArea fx:id="txtEmployeeDetails" layoutX="60.0" layoutY="243.0" opacity="0.87" prefHeight="164.0" prefWidth="670.0" />
+            <Label layoutX="70.0" layoutY="61.0" prefHeight="25.0" prefWidth="90.0" text="Supplier ID* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="106.0" prefHeight="25.0" prefWidth="68.0" text="Name* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="150.0" prefHeight="25.0" prefWidth="90.0" text="Company* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="59.0" prefHeight="25.0" prefWidth="90.0" text="Address* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="99.0" prefHeight="25.0" prefWidth="90.0" text="Contact* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="140.0" prefHeight="25.0" prefWidth="119.0" text="Bank Account No* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="383.0" layoutY="179.0" prefHeight="25.0" prefWidth="119.0" text="Bank Branch* :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSupplierID" layoutX="159.0" layoutY="61.0" prefHeight="25.0" prefWidth="119.0" />
+            <JFXTextField fx:id="txtSupplierName" layoutX="158.0" layoutY="104.0" prefHeight="25.0" prefWidth="191.0" promptText="Name" />
+            <JFXTextField fx:id="txtCompany" layoutX="158.0" layoutY="147.0" prefHeight="25.0" prefWidth="191.0" promptText="National ID Number" />
+            <JFXTextField fx:id="txtSupplierAddress" layoutX="502.0" layoutY="59.0" prefHeight="25.0" prefWidth="191.0" promptText="Address" />
+            <JFXTextField fx:id="txtSupplierContact" layoutX="502.0" layoutY="98.0" prefHeight="25.0" prefWidth="182.0" promptText="Contact Number" />
+            <JFXTextField fx:id="txtB_AccountNO" layoutX="502.0" layoutY="139.0" prefHeight="25.0" prefWidth="182.0" promptText="XXXXXXXXXXX" />
+            <JFXTextField fx:id="txtB_Branch" layoutX="501.0" layoutY="177.0" prefHeight="25.0" prefWidth="182.0" promptText="Branch" />
+            <JFXButton fx:id="btnSave" layoutX="659.0" layoutY="211.0" onAction="#btnSaveOnClickAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #2c26d3; -fx-background-radius: 5px;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnClear" layoutX="592.0" layoutY="211.0" onAction="#btnClearOnClickAction" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #12a83c; -fx-background-radius: 5px;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTreeTableView fx:id="tblSupplierDetails" currentItemsCount="8" layoutX="64.0" layoutY="246.0" prefHeight="157.0" prefWidth="660.0">
+               <columns>
+                  <TreeTableColumn fx:id="colSuppId" prefWidth="74.0" text="Emp_ID" />
+                  <TreeTableColumn fx:id="colName" prefWidth="73.0" text="Name" />
+                  <TreeTableColumn fx:id="colContact" prefWidth="76.0" text="Contact" />
+                  <TreeTableColumn fx:id="colCompany" prefWidth="75.0" text="Company" />
+                  <TreeTableColumn fx:id="colAddress" prefWidth="89.0" text="Address" />
+                  <TreeTableColumn fx:id="colB_ACC" prefWidth="87.0" text="B_ACC" />
+                  <TreeTableColumn fx:id="colBranch" prefWidth="86.0" text="B_Branch" />
+                  <TreeTableColumn fx:id="colDelete" prefWidth="96.0" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
